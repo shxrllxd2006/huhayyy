@@ -1,0 +1,552 @@
+
+/* =================================
+   GENERAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f7fc;
+    color: #222;
+    line-height: 1.6;
+}
+
+span {
+    color: #d9a72e;
+}
+
+
+/* =================================
+   NAVIGATION BAR
+================================= */
+
+header {
+    background: #123b70;
+    color: white;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    background: white;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.logo h2 {
+    font-size: 17px;
+    color: white;
+}
+
+.logo small {
+    display: block;
+    color: #ffd166;
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffd166;
+}
+
+
+/* =================================
+   HOME HERO SECTION
+================================= */
+
+.hero {
+    min-height: 520px;
+    background: linear-gradient(
+        135deg,
+        #123b70,
+        #2476bd
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeIn 1s ease;
+}
+
+.welcome {
+    color: #ffd166;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    font-size: 43px;
+    margin: 15px 0;
+}
+
+.hero h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.welcome) {
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+.btn {
+    display: inline-block;
+    background: #ffd166;
+    color: #123b70;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   FEATURES AND COURSES
+================================= */
+
+.features,
+.courses-section,
+.mission-section {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.features h2,
+.courses-section h2,
+.mission-section h2 {
+    font-size: 32px;
+    color: #123b70;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    width: 280px;
+    padding: 30px 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    border-bottom: 4px solid #2476bd;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card > i {
+    font-size: 42px;
+    color: #2476bd;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    color: #123b70;
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* =================================
+   ABOUT PAGE BANNER
+================================= */
+
+.page-banner {
+    background: linear-gradient(
+        135deg,
+        #123b70,
+        #2476bd
+    );
+
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.page-banner h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.page-banner p {
+    font-size: 16px;
+}
+
+
+/* =================================
+   ABOUT SECTION
+================================= */
+
+.about-section {
+    padding: 65px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    max-width: 550px;
+}
+
+.about-text h2 {
+    color: #123b70;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.about-icon {
+    width: 220px;
+    height: 220px;
+    background: #123b70;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-icon i {
+    color: #ffd166;
+    font-size: 90px;
+}
+
+
+/* =================================
+   COURSE LABEL
+================================= */
+
+.card .course-label {
+    display: inline-block;
+    background: #eaf2ff;
+    color: #123b70;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-top: 18px;
+}
+
+
+/* =================================
+   CALL TO ACTION
+================================= */
+
+.cta {
+    background: #e7eef8;
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    color: #123b70;
+    margin-bottom: 12px;
+    font-size: 27px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+
+/* =================================
+   GROUP MEMBERS
+================================= */
+
+.team-section {
+    padding: 65px 7%;
+    text-align: center;
+    background: #eaf1fa;
+}
+
+.team-section h2 {
+    color: #123b70;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.team-card {
+    width: 260px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000015;
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+}
+
+.team-card img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2476bd;
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    color: #123b70;
+    margin-bottom: 8px;
+}
+
+.team-card p {
+    color: #777;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    background: #123b70;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+.footer-content h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.footer-content h2 i {
+    color: #ffd166;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 23px;
+    margin: 0 12px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffd166;
+}
+
+.copyright {
+    border-top: 1px solid #ffffff40;
+    padding-top: 15px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #ddd;
+}
+
+
+/* =================================
+   ANIMATION
+================================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =================================
+   MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .page-banner h1 {
+        font-size: 27px;
+    }
+
+    .about-section {
+        text-align: center;
+        padding: 45px 20px;
+    }
+
+    .about-icon {
+        width: 170px;
+        height: 170px;
+    }
+
+    .about-icon i {
+        font-size: 65px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .cta h2 {
+        font-size: 22px;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+/* =================================
+   SMALL MOBILE SCREENS
+================================= */
+
+@media screen and (max-width: 480px) {
+
+    .logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo h2 {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+    .features h2,
+    .team-section h2 {
+        font-size: 25px;
+    }
+
+    .page-banner h1 {
+        font-size: 24px;
+    }
+}
